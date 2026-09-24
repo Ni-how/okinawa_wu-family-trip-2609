@@ -125,10 +125,10 @@
     }
 
     .btn.light {
-      background: rgba(255,255,255,.16);
-      color: white;
-      border-color: rgba(255,255,255,.4);
-      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,.96);
+      color: var(--ink);
+      border-color: rgba(255,255,255,.9);
+      box-shadow: 0 10px 24px rgba(9, 38, 47, .18);
     }
 
     main {
@@ -321,6 +321,222 @@
       color: #465a63;
     }
 
+    .spot-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 12px 0;
+    }
+
+    .spot-item {
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 10px;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfefd;
+      text-decoration: none;
+    }
+
+    .spot-thumb {
+      width: 86px;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+      border-radius: 7px;
+      background: #eef8f6;
+    }
+
+    .spot-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1rem;
+      color: var(--ink);
+    }
+
+    .spot-item span {
+      display: block;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .restaurant-callout {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      margin: 12px 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfefd;
+    }
+
+    .restaurant-callout img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      border-radius: 7px;
+      background: #eef8f6;
+    }
+
+    .restaurant-callout strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .restaurant-callout p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    .restaurant-callout .btn {
+      margin-top: 10px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    .info-panel {
+      background: rgba(255,255,255,.94);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-panel h2 {
+      margin: 0 0 10px;
+      font-size: 1.22rem;
+      letter-spacing: 0;
+    }
+
+    .checklist {
+      margin: 0;
+      padding-left: 20px;
+      color: #40535c;
+    }
+
+    .checklist li { margin: 7px 0; }
+
+    .process-steps {
+      margin: 0;
+      padding-left: 22px;
+      color: #40535c;
+    }
+
+    .process-steps li {
+      margin: 9px 0;
+      padding-left: 2px;
+    }
+
+    .process-steps strong {
+      color: var(--ink);
+    }
+
+    .checkin-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 12px 0 2px;
+    }
+
+    .checkin-card {
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfefd;
+    }
+
+    .checkin-card strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--ink);
+    }
+
+    .checkin-card img {
+      width: min(100%, 260px);
+      display: block;
+      border-radius: 6px;
+      border: 1px solid #e4eceb;
+      background: white;
+    }
+
+    .checkin-members {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: .92rem;
+      line-height: 1.55;
+    }
+
+    .weather-list {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .weather-day {
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfefd;
+    }
+
+    .weather-day strong,
+    .weather-day span {
+      display: block;
+    }
+
+    .weather-day span {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .forbidden-items {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .forbidden-items figure {
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .forbidden-items img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+    }
+
+    .forbidden-items figcaption {
+      padding: 8px 10px;
+      color: #40535c;
+      font-weight: 760;
+      font-size: .9rem;
+    }
+
     .source-panel {
       margin-top: 22px;
       padding: 18px;
@@ -343,6 +559,9 @@
     @media (max-width: 900px) {
       .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .stop { grid-template-columns: 160px 1fr; }
+      .info-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+      .weather-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 640px) {
@@ -374,6 +593,12 @@
 
       .photo img { min-height: 210px; }
 
+      .spot-list { grid-template-columns: 1fr; }
+      .restaurant-callout { grid-template-columns: 1fr; }
+      .weather-list { grid-template-columns: 1fr; }
+      .forbidden-items { grid-template-columns: 1fr; }
+      .checkin-cards { grid-template-columns: 1fr; }
+
       .btn {
         width: 100%;
       }
@@ -388,6 +613,10 @@
       <p class="hero-copy">依照行前備忘錄整理：每個景點可直接開 Google Maps，並附上官網或地圖參考照片、官網入口與點到點開車時間。</p>
       <div class="hero-actions">
         <a class="btn primary" href="#day1">開始看行程</a>
+        <a class="btn light" href="#travel-notes">出國注意事項</a>
+        <a class="btn light" href="#weather-forecast">天氣預報</a>
+        <a class="btn light" href="#taiwan-airport-process">台灣機場流程</a>
+        <a class="btn light" href="#naha-airport-process">那霸機場流程</a>
       </div>
     </div>
   </header>
@@ -398,6 +627,94 @@
       <div class="metric"><small>航班</small><strong>樂桃航空 MM922 桃園 09:35 → 那霸 12:20<br>樂桃航空 MM929 那霸 16:45 → 桃園 17:20</strong></div>
       <div class="metric"><small>住宿</small><strong>那霸旭橋托麗芙特酒店<br>Hotel Torifito Naha Asahibashi</strong></div>
       <div class="metric"><small>用車</small><strong>小巴 + 當地中文導遊</strong></div>
+    </section>
+
+    <section class="info-grid" aria-label="出國注意事項與天氣">
+      <div class="info-panel" id="travel-notes">
+        <h2>出國注意事項</h2>
+        <ul class="checklist">
+          <li>護照一定要帶新的有效護照，請不要帶到舊護照。</li>
+          <li>請攜帶防曬用品、雨具、環保杯或保溫杯，方便行程中補充水分。</li>
+          <li>慢性病藥物、習慣用藥、營養品與保健食品請自行備妥；也建議帶止痛藥或腸胃藥以備不時之需，日本飯店不能提供藥物。</li>
+          <li>一般打火機可依規定攜帶；不可攜帶防風打火機。刮鬍刀、水果刀等尖銳或刀刃物品請放托運行李。</li>
+          <li>超過 100ml 的液體、凝膠狀物品請放托運行李。手機、筆電、平板、行動電源請隨身攜帶。</li>
+          <li>行動電源 10,000mAh 不得超過 2 個，20,000mAh 僅能 1 個；飛機上不可用行動電源充電，且須放在視線可見處。</li>
+          <li>台灣出境、入境都不可攜帶電子煙，若攜帶可能觸法。</li>
+          <li>日本多數店家不再免費提供購物袋，購物袋常需另付 3-5 日圓，建議自備環保袋。</li>
+          <li>每人 1 件 20 公斤託運行李，隨身行李最多 2 件、合計 7 公斤內。</li>
+        </ul>
+        <div class="forbidden-items" aria-label="禁止購買回台商品">
+          <figure>
+            <img src="images/do-not-buy-mosquito-spray.png" alt="不可購買回台灣的防蚊噴霧產品">
+            <figcaption>不可購買回台：環境用藥噴霧類</figcaption>
+          </figure>
+          <figure>
+            <img src="images/do-not-buy-insect-plate.png" alt="不可購買回台灣的懸掛式防蟲產品">
+            <figcaption>不可購買回台：環境用藥防蟲片</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="info-panel" id="weather-forecast">
+        <h2>那霸天氣預報</h2>
+        <p class="notes">出發前查詢版，天氣仍可能變動，請以當天 Google 天氣或氣象 App 為準。</p>
+        <div class="weather-list">
+          <div class="weather-day"><strong>9/26 六</strong><span>晴時多雲</span><span>32° / 27°</span><span>降雨 20%</span></div>
+          <div class="weather-day"><strong>9/27 日</strong><span>晴時偶陣雨</span><span>32° / 27°</span><span>降雨 50%</span></div>
+          <div class="weather-day"><strong>9/28 一</strong><span>晴天</span><span>33° / 28°</span><span>降雨 10%</span></div>
+          <div class="weather-day"><strong>9/29 二</strong><span>晴天</span><span>32° / 27°</span><span>降雨 10%</span></div>
+        </div>
+        <p class="notes">沖繩白天仍偏熱，建議帽子、防曬、雨具與水瓶都放隨身包。</p>
+        <div class="actions">
+          <a class="btn secondary" target="_blank" rel="noopener" href="https://www.japan.travel/tw/weather/okinawa/naha/">查看最新天氣</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-grid" aria-label="機場流程">
+      <div class="info-panel" id="taiwan-airport-process">
+        <h2>台灣出發機場流程</h2>
+        <ol class="process-steps">
+          <li><strong>帶好證件：</strong>出發當日請攜帶有效護照。</li>
+          <li><strong>抵達時間：</strong>請在班機起飛前 3 小時，抵達桃園機場第一航廈。</li>
+          <li><strong>報到櫃檯：</strong>前往第一航廈第 12 號樂桃航空櫃檯辦理登機手續。</li>
+          <li><strong>確認托運行李：</strong>登機手續結束後，請到後方確認自己的行李通過 X 光檢查。</li>
+          <li><strong>安檢與出境：</strong>確認行李沒問題後，請盡速到二樓進行安檢與出境手續。</li>
+          <li><strong>登機門提醒：</strong>機場有時會臨時更改登機門，請務必在登機證上的登機時間前 15 分鐘抵達登機門。</li>
+          <li><strong>候機室檢查：</strong>候機時可先確認日本入境卡與海關卡是否填寫完整，若有遺漏請在候機時間補上。</li>
+          <li><strong>抵達沖繩入境：</strong>抵達後請把入境卡放入護照相片頁，交給日本入境官進行入境審查。</li>
+          <li><strong>領行李與海關：</strong>完成入境後至行李轉盤提領行李，確認沒有拿錯；再將海關單夾在護照相片頁，帶著行李交給海關人員檢查。</li>
+          <li><strong>出關集合：</strong>出關後，導遊會在一樓入境大廳等候大家，接著帶領上車開始旅程。</li>
+        </ol>
+      </div>
+
+      <div class="info-panel" id="naha-airport-process">
+        <h2>那霸出發機場流程</h2>
+        <ol class="process-steps">
+          <li><strong>抵達時間：</strong>回程時導遊會在出發前 2.5 小時帶大家抵達那霸機場國際線三樓。</li>
+          <li><strong>樂桃報到：</strong>導遊會帶大家到樂桃航空國際線櫃檯進行報到手續。</li>
+          <li><strong>自動報到機：</strong>請在自動報到機輸入或感應電子機票 QR Code，也可輸入訂位 PNR。
+            <div class="checkin-cards" aria-label="樂桃航空報到 QR code 與訂位代號">
+              <div class="checkin-card">
+                <strong>10 位團員：APDVS9</strong>
+                <img src="images/peach-qr-10p-apdvs9.png" alt="10 位團員樂桃航空完整 QR code，訂單編號 APDVS9">
+                <p class="checkin-members">包含：陳姵瑾、邱毓珊、李孟凌、王瑋璉、吳柏鋒、吳承翰、吳承懋、吳宗鍇、吳玟錡、吳宣瑩。</p>
+              </div>
+              <div class="checkin-card">
+                <strong>5 位團員：Z36YZP</strong>
+                <img src="images/peach-qr-5p-z36yzp.png" alt="5 位團員樂桃航空完整 QR code，訂單編號 Z36YZP">
+                <p class="checkin-members">包含：吳金龍、吳品君、吳玟靜、顏辰熹、顏俊杰。</p>
+              </div>
+            </div>
+          </li>
+          <li><strong>選擇姓名：</strong>因團票同一個 PNR 可能約有 10 位旅客姓名，畫面出現名單後請點選自己的名字。</li>
+          <li><strong>列印登機證：</strong>依照機器指示印出登機證。</li>
+          <li><strong>托運行李：</strong>拿著登機證到托運櫃檯辦理行李托運。</li>
+          <li><strong>出境安檢：</strong>托運完成後，前往國際線二樓安檢入口進行出境安檢。</li>
+          <li><strong>自動通關：</strong>安檢結束後，出境時請使用自動通關系統，將護照放在機器上通過查驗。</li>
+          <li><strong>免稅區與登機門：</strong>通過後即可抵達免稅區與登機門區，請找到自己的登機門準備回台。</li>
+        </ol>
+      </div>
     </section>
 
     <p class="notice">車程為一般路況預估，實際時間請以出發當下 Google Maps 為準。行程順序仍以當地導遊、交通與天候調整為準。</p>
@@ -648,6 +965,14 @@
             <h3>浦添西海岸 PARCO CITY</h3>
             <div class="meta"><span class="pill drive">兒童王國 → 約 35-45 分</span><span class="pill">購物 / 晚餐 17:30 敘敘苑燒肉</span></div>
             <p class="notes">約 250 間店鋪、4,000 個免費停車位。行前備忘錄註記敘敘苑 PARCO CITY 店 12 大 + 3 兒童，晚餐自理。</p>
+            <div class="restaurant-callout">
+              <img src="https://tblg.k-img.com/resize/660x370c/restaurant/images/Rvw/279857/34ac488b61f26eb29c785c64774cd7b2.jpg?api=v2&token=0464a6a" alt="敘敘苑燒肉餐點參考">
+              <div>
+                <strong>敘敘苑 沖繩浦添 PARCO CITY 店</strong>
+                <p>17:30 預計晚餐，可直接查看餐廳位置與集合動線。</p>
+                <a class="btn secondary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Jojoen%20Okinawa%20Urasoe%20PARCO%20CITY">查看餐廳</a>
+              </div>
+            </div>
             <div class="actions">
               <a class="btn secondary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=San-A%20Urasoe%20West%20Coast%20PARCO%20CITY">查看地點</a>
               <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Okinawa%20Zoo%20%26%20Museum&destination=San-A%20Urasoe%20West%20Coast%20PARCO%20CITY&travelmode=driving">開車路線</a>
@@ -697,6 +1022,44 @@
             <div class="actions">
               <a class="btn secondary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Hotel%20Torifito%20Naha%20Asahibashi">飯店地圖</a>
               <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Kokusai%20Dori%20Naha">國際通地圖</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop">
+          <div class="photo">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sea%20view%20at%20Naminoue%20Umisora%20Park%2020250503162635.jpg?width=800" alt="波之上海空公園海景">
+            <span>附近散步</span>
+          </div>
+          <div>
+            <h3>14:00 集合前：飯店附近自由活動推薦</h3>
+            <div class="meta"><span class="pill">上午自由活動</span><span class="pill">14:00 飯店大廳集合</span></div>
+            <p class="notes">早餐後可寄放行李，建議安排飯店步行或短程計程車可到的景點與午餐。請預留回飯店取行李時間，13:30 前回到飯店附近會比較安心。</p>
+            <div class="spot-list">
+              <a class="spot-item" target="_blank" rel="noopener" href="https://maps.app.goo.gl/kShSA1YEtqAk7jt18?g_st=il">
+                <img class="spot-thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/JP%20%E6%B2%96%E7%B9%A9%20Okinawa%20%E9%82%A3%E9%9C%B8%E5%B8%82%20Naha%20City%20%E7%A6%8F%E5%B7%9E%E5%9C%92%20Fukushuen%20Garden%20entrance%20front%20February%202026%20N13P%2001.jpg?width=320" alt="福州園入口">
+                <span><strong>福州園</strong><span>中式庭園，適合散步拍照，離飯店近。</span></span>
+              </a>
+              <a class="spot-item" target="_blank" rel="noopener" href="https://maps.app.goo.gl/t35tJ98Z9RNYRZiz6?g_st=il">
+                <img class="spot-thumb" src="https://torifito.jp/nahaab/wp-content/uploads/sites/20/2022/01/%E6%B3%A2%E4%B8%8A%E5%AE%AE.jpg" alt="波上宮神社">
+                <span><strong>波上宮</strong><span>那霸代表神社，可順路看海景。</span></span>
+              </a>
+              <a class="spot-item" target="_blank" rel="noopener" href="https://maps.app.goo.gl/1ApyebnbTyu4n2GPA?g_st=il">
+                <img class="spot-thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sea%20view%20at%20Naminoue%20Umisora%20Park%2020250503162635.jpg?width=320" alt="波之上海空公園海景">
+                <span><strong>波之上海空公園</strong><span>海邊公園，適合慢走、吹海風。</span></span>
+              </a>
+              <a class="spot-item" target="_blank" rel="noopener" href="https://maps.app.goo.gl/JCcVvncr8SU5KsrH7?g_st=il">
+                <img class="spot-thumb" src="https://static.wixstatic.com/media/d93a81_cb61a388ab514611b6f19a6bc412ebae~mv2.jpg/v1/fill/w_490,h_331,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/d93a81_cb61a388ab514611b6f19a6bc412ebae~mv2.jpg" alt="Kame Kame Soba 沖繩麵餐點">
+                <span><strong>Kame Kame Soba</strong><span>沖繩麵午餐選項，時間抓鬆一點。</span></span>
+              </a>
+              <a class="spot-item" target="_blank" rel="noopener" href="https://maps.app.goo.gl/G5uGQbmBYbZbQb2ZA?g_st=il">
+                <img class="spot-thumb" src="https://tblg.k-img.com/restaurant/images/Rvw/84158/150x150_square_84158660.jpg" alt="Takara Diner 餐點參考">
+                <span><strong>Takara Diner</strong><span>輕食或早午餐選項，適合不想走太遠的人。</span></span>
+              </a>
+            </div>
+            <div class="actions">
+              <a class="btn secondary" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Hotel%20Torifito%20Naha%20Asahibashi&destination=Fukushuen%20Naha&waypoints=Naminoue%20Shrine%7CNaminoue%20Umisora%20Park&travelmode=walking">散步路線參考</a>
+              <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/%E5%92%96%E5%95%A1%E5%BB%B3/@26.2149,127.6732,16z">飯店附近咖啡</a>
             </div>
           </div>
         </article>
