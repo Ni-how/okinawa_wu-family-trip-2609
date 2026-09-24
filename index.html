@@ -125,10 +125,10 @@
     }
 
     .btn.light {
-      background: rgba(255,255,255,.96);
-      color: var(--ink);
-      border-color: rgba(255,255,255,.9);
-      box-shadow: 0 10px 24px rgba(9, 38, 47, .18);
+      background: rgba(255,255,255,.16);
+      color: white;
+      border-color: rgba(255,255,255,.4);
+      backdrop-filter: blur(8px);
     }
 
     main {
@@ -492,10 +492,26 @@
     }
 
     .weather-day {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 10px;
+      align-items: center;
       padding: 10px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: #fbfefd;
+    }
+
+    .weather-icon {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      aspect-ratio: 1;
+      border-radius: 8px;
+      background: #fff4d8;
+      border: 1px solid #f1d393;
+      font-size: 1.4rem;
+      line-height: 1;
     }
 
     .weather-day strong,
@@ -608,22 +624,22 @@
 <body>
   <header class="hero">
     <div class="hero-inner">
-      <p class="eyebrow">2026/09/26 - 09/29 Okinawa</p>
+      <p class="eyebrow">2026/09/26（六） - 09/29（二） Okinawa</p>
       <h1>吳家沖繩 4 日旅遊行程</h1>
       <p class="hero-copy">依照行前備忘錄整理：每個景點可直接開 Google Maps，並附上官網或地圖參考照片、官網入口與點到點開車時間。</p>
       <div class="hero-actions">
-        <a class="btn primary" href="#day1">開始看行程</a>
         <a class="btn light" href="#travel-notes">出國注意事項</a>
         <a class="btn light" href="#weather-forecast">天氣預報</a>
         <a class="btn light" href="#taiwan-airport-process">台灣機場流程</a>
         <a class="btn light" href="#naha-airport-process">那霸機場流程</a>
+        <a class="btn primary" href="#day1">開始看行程</a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="summary" aria-label="行程摘要">
-      <div class="metric"><small>團體出發</small><strong>2026/09/26 06:10 家樓下機場接送出發<br>07:00 桃園機場第一航廈集合</strong></div>
+      <div class="metric"><small>團體出發</small><strong>2026/09/26（六）06:10 家樓下機場接送出發<br>07:00 桃園機場第一航廈集合</strong></div>
       <div class="metric"><small>航班</small><strong>樂桃航空 MM922 桃園 09:35 → 那霸 12:20<br>樂桃航空 MM929 那霸 16:45 → 桃園 17:20</strong></div>
       <div class="metric"><small>住宿</small><strong>那霸旭橋托麗芙特酒店<br>Hotel Torifito Naha Asahibashi</strong></div>
       <div class="metric"><small>用車</small><strong>小巴 + 當地中文導遊</strong></div>
@@ -659,10 +675,10 @@
         <h2>那霸天氣預報</h2>
         <p class="notes">出發前查詢版，天氣仍可能變動，請以當天 Google 天氣或氣象 App 為準。</p>
         <div class="weather-list">
-          <div class="weather-day"><strong>9/26 六</strong><span>晴時多雲</span><span>32° / 27°</span><span>降雨 20%</span></div>
-          <div class="weather-day"><strong>9/27 日</strong><span>晴時偶陣雨</span><span>32° / 27°</span><span>降雨 50%</span></div>
-          <div class="weather-day"><strong>9/28 一</strong><span>晴天</span><span>33° / 28°</span><span>降雨 10%</span></div>
-          <div class="weather-day"><strong>9/29 二</strong><span>晴天</span><span>32° / 27°</span><span>降雨 10%</span></div>
+          <div class="weather-day"><span class="weather-icon" aria-hidden="true">⛅</span><span><strong>9/26（六）</strong><span>晴時多雲</span><span>32° / 27°</span><span>降雨 20%</span></span></div>
+          <div class="weather-day"><span class="weather-icon" aria-hidden="true">🌦</span><span><strong>9/27（日）</strong><span>晴時偶陣雨</span><span>32° / 27°</span><span>降雨 50%</span></span></div>
+          <div class="weather-day"><span class="weather-icon" aria-hidden="true">☀</span><span><strong>9/28（一）</strong><span>晴天</span><span>33° / 28°</span><span>降雨 10%</span></span></div>
+          <div class="weather-day"><span class="weather-icon" aria-hidden="true">☀</span><span><strong>9/29（二）</strong><span>晴天</span><span>32° / 27°</span><span>降雨 10%</span></span></div>
         </div>
         <p class="notes">沖繩白天仍偏熱，建議帽子、防曬、雨具與水瓶都放隨身包。</p>
         <div class="actions">
@@ -720,16 +736,16 @@
     <p class="notice">車程為一般路況預估，實際時間請以出發當下 Google Maps 為準。行程順序仍以當地導遊、交通與天候調整為準。</p>
 
     <nav class="day-nav" aria-label="快速跳轉">
-      <a href="#day1">9/26 抵達與南中部</a>
-      <a href="#day2">9/27 古宇利與美麗海</a>
-      <a href="#day3">9/28 親子與購物</a>
-      <a href="#day4">9/29 自由活動與返台</a>
+      <a href="#day1">9/26（六）抵達與南中部</a>
+      <a href="#day2">9/27（日）古宇利與美麗海</a>
+      <a href="#day3">9/28（一）親子與購物</a>
+      <a href="#day4">9/29（二）自由活動與返台</a>
     </nav>
 
     <section class="day" id="day1">
       <div class="day-header">
         <div>
-          <h2>第一天 9/26：桃園機場 / 那霸機場 → 系滿漁市場 → 瀨長島 → 美國村 → 飯店</h2>
+          <h2>第一天 9/26（六）：桃園機場 / 那霸機場 → 系滿漁市場 → 瀨長島 → 美國村 → 飯店</h2>
           <p>抵達沖繩後先往南吃海鮮，再回到瀨長島看海與飛機，傍晚前往北谷美國村逛街。</p>
         </div>
         <span class="tag">抵達日</span>
@@ -823,7 +839,7 @@
     <section class="day" id="day2">
       <div class="day-header">
         <div>
-          <h2>第二天 9/27：古宇利島 + 蝦蝦飯 → 美麗海水族館 → Ocean Boo 晚餐 → 飯店</h2>
+          <h2>第二天 9/27（日）：古宇利島 + 蝦蝦飯 → 美麗海水族館 → Ocean Boo 晚餐 → 飯店</h2>
           <p>北部長距離移動日，重點是古宇利大橋海景、KOURI SHRIMP 與美麗海水族館。</p>
         </div>
         <span class="tag">北部海景</span>
@@ -917,7 +933,7 @@
     <section class="day" id="day3">
       <div class="day-header">
         <div>
-          <h2>第三天 9/28：沖繩兒童王國 → PARCO CITY → 國際通與牧志市場</h2>
+          <h2>第三天 9/28（一）：沖繩兒童王國 → PARCO CITY → 國際通與牧志市場</h2>
           <p>中部親子景點、購物中心與那霸市區散策。本日行程註記自行回飯店。</p>
         </div>
         <span class="tag">親子購物</span>
@@ -1004,7 +1020,7 @@
     <section class="day" id="day4">
       <div class="day-header">
         <div>
-          <h2>第四天 9/29：自由活動 → 14:00 飯店集合 → 那霸機場 / 桃園機場</h2>
+          <h2>第四天 9/29（二）：自由活動 → 14:00 飯店集合 → 那霸機場 / 桃園機場</h2>
           <p>早餐後可寄放行李，自由活動至下午飯店大廳集合送機。</p>
         </div>
         <span class="tag">返台日</span>
